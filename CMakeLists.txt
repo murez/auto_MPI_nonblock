@@ -10,7 +10,7 @@ find_package(MPI REQUIRED)
 
 file(GLOB SOURCES *.cpp)
 
-add_library(ReplaceMPIReduce MODULE ReplaceMPIReduce.cpp)
+add_library(ReplaceMPIColl MODULE ReplaceMPIColl.cpp)
 add_executable(main main.cpp)
 
 target_link_libraries(main ${llvm_libs} MPI::MPI_CXX)
